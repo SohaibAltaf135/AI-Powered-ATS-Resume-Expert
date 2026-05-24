@@ -38,8 +38,7 @@ def get_gemini_response(input, pdf_content, prompt):
 def input_pdf_setup(uploaded_file):
     if uploaded_file is not None:
         images = pdf2image.convert_from_bytes(
-            uploaded_file.read(),
-            poppler_path=r"C:\Program Files (x86)\poppler\Library\bin"
+            uploaded_file.read()
         )
         first_page = images[0]
         img_byte_arr = io.BytesIO()
